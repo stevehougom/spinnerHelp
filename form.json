@@ -1,0 +1,474 @@
+{
+  "action": "https://stgformservice-hc-api.azurewebsites.net/form/gopack/1.0",
+  "submit" : "Submit",
+    
+    "fields": [
+      {
+        "name": "technologyNeeds",
+        "input": "select",
+        "type": "checkbox",
+        "label": "Technology needs",
+        "options": [
+            
+            {
+              "option": "Windows computer",
+              "value": "1"
+            },
+            {
+                "option": "Internet access",
+                "value": "2"
+            },
+            {
+                "option": "Digital navigator support",
+                "value": "3"
+            }
+          ]
+       
+      },
+      {
+        "name":"recCaption",
+        "input":"caption",
+        "type": "caption",
+        "label": "Recipient Information"
+      },
+      {
+        "name": "fName",
+        "input": "text",
+        "type": "text",
+        "label": "First Name",
+        "validations" : [
+          {
+            "type" : "pattern",
+            "expression": "[A-Za-z]+"
+          }
+        ],
+        "validationMessage" : "First name is required | Cannot contain digit!"
+      },
+      {
+        "name": "mName",
+        "input": "text",
+        "type": "text",
+        "label": "Middle Name"
+      },
+      {
+        "name": "lName",
+        "input": "text",
+        "type": "text",
+        "label": "Last Name",
+        "validations" : [
+          {
+            "type" : "pattern",
+            "expression": "[A-Za-z]+"
+          }
+        ],
+        "validationMessage" : "Last name is required | Cannot contain digit!"
+      },
+      {
+        "name": "appAddress1",
+        "input": "text",
+        "type": "text",
+        "label": "Address1",
+        "validations" : [
+          {
+            "type" : "required"
+          }
+        ],
+        "validationMessage" : "Address is required!"
+      },
+      {
+        "name": "appAddress2",
+        "input": "text",
+        "type": "text",
+        "label": "Address2"
+      },
+      {
+        "name": "city",
+        "input": "text",
+        "type": "text",
+        "label": "City",
+        "validations" : [
+          {
+            "type" : "required"
+          }
+        ],
+        "validationMessage" : "City is required!"
+      },
+      {
+        "name": "state",
+        "input": "text",
+        "type": "text",
+        "label": "State",
+        "validations" : [
+          {
+            "type" : "required"
+          }
+        ],
+        "validationMessage" : "State is required!"
+      },
+      {
+        "name": "zip",
+        "input": "text",
+        "type": "text",
+        "label": "Zip",
+        "validations" : [
+          {
+            "type" : "pattern",
+            "expression": "[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}"
+          }
+        ],
+        "validationMessage" : "Zip code is required | Cannot contain alphabets!"
+      },
+      {
+        "name": "appPhone",
+        "input": "text",
+        "type": "text",
+        "label": "Phone. Format:[xxx-xxx-xxxx]",
+        "validations" : [
+          {
+            "type" : "pattern",
+            "expression": "[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          }
+         
+        ],
+        "validationMessage" : "Accepted format: [XXX-XXX-XXXX]!"
+      },
+      {
+        "name": "appEmail",
+        "input": "text",
+        "type": "text",
+        "label": "email",
+        "validations" : [
+          {
+            "type" : "required"
+          }
+         
+        ],
+        
+        "validationMessage" : "email is required!"
+      },
+      {
+        "name": "preferredContact",
+        "input": "select",
+        "type": "radio",
+        "label": "Preferred contact",
+        "options": [
+          {
+            "option": "phone",
+            "value": "0"
+          },
+          {
+            "option": "email",
+            "value": "1"
+          },
+          {
+            "option": "text",
+            "value": "1"
+          }
+          
+        ],
+        "validations" : [
+          {
+            "type" : "required"
+          }
+        ],
+        "validationMessage" : "Preferred contact is required!"
+      },
+      {
+        "name": "jobStatus",
+        "input": "select",
+        "type": "checkbox",
+        "label": "Eligibility criteria (check all that apply):",
+        "options": [
+          {
+            "option": "Laid off, furloughed, unemployed or underemployed due to COVID-19",
+            "value": "0"
+          },
+          {
+            "option": "Children in the home participating in distance learning due to COVID-19",
+            "value": "1"
+          },
+          {
+            "option": "Children in the home need assistance accessing library tutoring, homework help or other education supports offered online due to COVID-19",
+            "value": "2"
+          },
+          {
+            "option": "Adult students participating in distance learning due to COVID (adult basic education, post-secondary school, etc)",
+            "value": "3"
+          },
+          {
+            "option": "Adult job seekers participating in virtual job training offered online due to COVID-19",
+            "value": "4"
+          },
+          {
+            "option": "Household members need assistance accessing digital services to use telehealth for medical or therapy appointments, to participate in court-ordered visits or other services delivered online due to COVID-19",
+            "value": "5"
+          },
+          {
+            "option": "Seniors whose technology needs changed due to COVID-19",
+            "value": "6"
+          }
+        ],
+        "validations" : [
+          {
+            "type" : "required"
+          }
+        ],
+        "validationMessage" : "Eligibility criteria is required!"
+      },
+      {
+        "name":"techCaption",
+        "input":"caption",
+        "type": "caption",
+        "label": "Technology Assessment"
+      },
+      {
+        "name":"techDescription",
+        "input":"description",
+        "type": "description",
+        "label": "Additional Information about the technology needs of the household. This information is optional and will be used to provide more targeted technology support"
+      },
+      {
+        "name": "technologyAccess",
+        "input": "select",
+        "type": "checkbox",
+        "label": "Current technology access",
+        "options": [
+            {
+              "option": "Has the recipient previously owned a computer?",
+              "value": "0"
+            },
+            {
+              "option": "Is there currently a computer in the home?",
+              "value": "1"
+            },
+            {
+                "option": "Is there currently Internet access at home?",
+                "value": "2"
+            },
+            {
+              "option": "Does the recipient own a smartphone?",
+              "value": "3"
+            }
+           
+          ],
+          "validations" : [
+            {
+              "type" : "required"
+            }
+          ],
+          "validationMessage" : "Technology access is required!"
+       
+      },
+
+      {
+        "name": "householdMembers",
+        "input": "select",
+        "type": "checkbox",
+        "label": "Household members who will use this technology",
+        "options": [
+            {
+              "option": "Children",
+              "value": "0"
+            },
+            {
+              "option": "Adults",
+              "value": "1"
+            },
+            {
+                "option": "Seniors",
+                "value": "2"
+              }
+          ],
+          "validations" : [
+            {
+              "type" : "required"
+            }
+          ],
+          "validationMessage" : "Household members is required!"
+       
+      },
+      {
+        "name": "tranLang",
+        "input": "select",
+        "type": "radio",
+        "label": "Is language translation requested?",
+        "options": [
+          {
+            "option": "yes",
+            "value": "0"
+          },
+          {
+            "option": "no",
+            "value": "1"
+          }
+         ]
+
+        },
+
+        {
+          "name": "langNeeded",
+          "input": "text",
+          "type": "text",
+          "label": "If yes, please indicate the language needed"
+        },
+
+        {
+          "name": "needLibraryCard",
+          "input": "select",
+          "type": "radio",
+          "label": "Do you know if this person or another household member has a library card?",
+          "options": [
+            {
+              "option": "yes",
+              "value": "0"
+            },
+            {
+              "option": "no",
+              "value": "1"
+            }
+           ]
+  
+          },
+          {
+            "name": "otherBarrier",
+            "input": "text",
+            "type": "text",
+            "label": "Does this person have any other technology needs or barrier?"
+          },
+
+      {
+        "name": "totalPeople",
+        "input": "text",
+        "type": "text",
+        "label": "Total number of people in your home",
+        "validations": [
+          {
+            "type": "pattern",
+            "expression": "[0-9]?[0-9]"
+          }
+        ],
+        "validationMessage" : "Accept maximum of two digits!"
+       
+      },
+      {
+        "name": "totalChildren",
+        "input": "text",
+        "type": "text",
+        "label": "Total number of children in the home",
+        "validations": [
+          {
+            "type": "pattern",
+            "expression": "[0-9]?[0-9]"
+          }
+        ],
+        "validationMessage" : "Accept maximum of two digits!"
+       
+      },
+      {
+        "name":"demoCaption",
+        "input":"caption",
+        "type": "caption",
+        "label": "Demographic Data"
+      },
+      {
+        "name": "annualIncome",
+        "input": "text",
+        "type": "text",
+        "label": "Estimated total household annual income"
+      },
+      {
+        "name": "employmentStatus",
+        "input": "select",
+        "type": "radio",
+        "label": "Employment status:",
+        "options": [
+          {
+            "option": "Employed",
+            "value": "0"
+          },
+          {
+            "option": "Unemployed",
+            "value": "1"
+          },
+          {
+              "option": "Retired",
+              "value": "2"
+          },
+          {
+              "option": "Student",
+              "value": "3"
+          }
+        ]
+      },
+      {
+        "name": "userAge",
+        "input": "select",
+        "type": "radio",
+        "label": "Age of primary technology user:",
+        "options": [
+          {
+            "option": "Under18",
+            "value": "0"
+          },
+          {
+            "option": "18-24",
+            "value": "1"
+          },
+          {
+              "option": "25-54",
+              "value": "2"
+          },
+          {
+              "option": "55-64",
+              "value": "3"
+          },
+          {
+            "option": "65 and up",
+            "value": "4"
+          },
+          {
+            "option": "Prefer not to say",
+            "value": "5"
+          }
+        ]
+      },
+      {
+        "name": "userRace",
+        "input": "select",
+        "type": "checkbox",
+        "label": "Race of primary technology user:",
+        "options": [
+          {
+            "option": "African American/African",
+            "value": "0"
+          },
+          {
+            "option": "American Indian/Alaskan Native",
+            "value": "1"
+          },
+          {
+              "option": "Asian/Pacific Islander",
+              "value": "2"
+          },
+          {
+              "option": "Non-Hispanic white or Caucasian",
+              "value": "3"
+          },
+          {
+            "option": "Latino/Latina/Hispanic",
+            "value": "4"
+          },
+          {
+            "option": "Other",
+            "value": "5"
+          },
+          {
+            "option": "Prefer not to say",
+            "value": "6"
+          }
+        ]
+      }
+      
+     
+    ]
+  }
